@@ -1,0 +1,51 @@
+/* Container styles */
+.subhero-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    padding: 20px;
+  }
+  
+  /* Item styles */
+  .subhero-item {
+    width: 32%;
+    height: 450px;
+    overflow: hidden; /* Prevents images from overflowing */
+    cursor: pointer; /* Changes cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .subhero-item:hover {
+    transform: translateY(-5px); /* Slightly lifts the item on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+  }
+  
+  /* Image styles */
+  .subhero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover their area proportionally */
+    transition: transform 0.3s ease;
+  }
+  
+  .subhero-image:hover {
+    transform: scale(1.1); /* Scales the image on hover */
+  }
+  
+  /* Media Queries */
+
+/* Tablet view: 768px and below */
+@media (max-width: 768px) {
+    .subhero-item {
+      width: 48%; /* Two items per row on tablets */
+      height: 300px; /* Reduce height for smaller screens */
+    }
+  }
+  
+  /* Mobile view: 480px and below */
+  @media (max-width: 480px) {
+    .subhero-item {
+      width: 50%; /* Stacks items on mobile */
+      height: 100px; /* Reduce height for mobile */
+    }
+  }
