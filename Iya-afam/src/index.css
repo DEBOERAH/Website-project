@@ -8,3 +8,9 @@
        group-hover:border-gray-500 px-3 py-1 focus:outline-none;
     }
 }
+
+a.active hr{
+    display: block;
+
+}
+    

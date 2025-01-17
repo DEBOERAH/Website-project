@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { products } from "../assets/data.js";
+import productItem from "./productItem.jsx";
 
 const Shop = () => {
     const [sortOption, setSortOption] = useState("top"); // Track selected sorting option
@@ -120,6 +121,19 @@ const Shop = () => {
                     ))}
                 </div>
             </div>
+            {/* Remdering Products */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
+                {/* {
+                    products.map((item,index=>(
+                        <productItem/>
+                    ))
+                } */}
+
+
+
+            </div>
+
+
         </div>
     );
 };

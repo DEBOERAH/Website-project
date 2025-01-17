@@ -7,11 +7,14 @@ import 'swiper/css';
 
 // import required modules
 import {Autoplay} from 'swiper/modules';
-import ProductCard from "./ProductCard.jsx";
-import {products} from "/src/assets/data.js"
-import {useEffect, useState} from "react";
+
+import {ShopContext} from "../";
+import {useContext, useEffect, useState} from "react";
 
 const Products = () => {
+
+
+    const {products} = useContext(ShopContext);
 
     const [popularProducts, setPopularProducts] = useState([]);
 
@@ -73,6 +76,16 @@ const Products = () => {
                     }
                 </Swiper>
             </div>
+        
+        {/* Rendering products */}
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
+            {
+               popularProducts.map((products,index) =>(
+                   <productItem key={index} id={products._id} image={products.image} name={products.name} price={products.price}/>
+                   
+               ))
+            }
+        </div>
         </section>
     )
 }

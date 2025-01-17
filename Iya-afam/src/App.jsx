@@ -7,6 +7,10 @@ import Kerosene from "./components/Kerosene/Kerosene.jsx";
 import Shop from "./pages/Shop.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Contactus from "./pages/Contactus.jsx";
+import Product from "./pages/productItem.jsx";
+import Cart from "./pages/Cart.jsx";
 
 
 export default function App() {
@@ -16,9 +20,14 @@ export default function App() {
                 <Routes>
                     <Route index element={<Home/>}/>
                     <Route path="/home" element={<Home/>}/>
+                    <Route path="/AboutUs" element={<AboutUs/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/shop" element={<Shop/>}/>
+                    <Route path="/Shop" element={<Shop/>}/>
                     <Route path="/Drinks" element={<Drinks/>}/>
+                    <Route path="/Contactus" element={<Contactus/>}/>
+                    <Route path="/Product/:ProductId" element={<Product/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
+
                     {/* <Route path="/FrozenFood" element={<Frozenfood/>}/> */}
                     <Route path="/Kerosene" element={<Kerosene/>}/>
                 </Routes>

@@ -4,12 +4,13 @@ import {RxHamburgerMenu} from "react-icons/rx";
 import {FaCartShopping} from "react-icons/fa6";
 import {MdOutlinePerson} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MenuLinks = [
     {id: 1, name: "Home", link: "/home"},
     {id: 2, name: "Shop", link: "/shop"},
-    {id: 3, name: "About us", link: "/#"},
-    {id: 4, name: "Contact us", link: "/#"},
+    {id: 3, name: "About us", link: "/AboutUs"},
+    {id: 4, name: "Contact us", link: "/Contactus"},
 ];
 
 const Navbar = () => {
@@ -65,18 +66,29 @@ const Navbar = () => {
                             right-3 duration-200"/>
                         </div>
                         {/*Cart Icon*/}
-                        <button className="relative p-3">
+                        <Link to  = "/Cart" className="relative">
+                        
                             <FaCartShopping className="text-xl text-gray-600"/>
-                            <div
-                                className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-x5">
-                                4
-                            </div>
-                        </button>
+                            <p className='absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-[#F4A4AA] text-white aspect-square rounded-full text-[8px]'>10</p>
+                            
+                        </Link>
                         <div></div>
                         {/* Hamburger Menu (visible on small screens) */}
+                        <div className='group relative'>
                         <button onClick={goToLogin}>
                             <MdOutlinePerson className="text-3xl text-gray-600" />
                         </button>
+                        <div className='group-hover:block hidden absolute dropdown-menu Right-0 pt-4'>
+                            <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-[#eebec2] text-gray-500 rounded'>
+                                <p className='cursor-pointer hover:text-black'>My Profile</p>
+                                <p className='cursor-pointer hover:text-black'>Orders</p>
+                                <p className='cursor-pointer hover:text-black'>Log in</p>
+
+
+                            </div>
+
+                        </div>
+                        </div>
                         <button
                             className="lg:hidden text-2xl focus:outline-none"
                             onClick={toggleDrawer}
