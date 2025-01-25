@@ -2,6 +2,9 @@ import coke from "./Images/Coke.jpg";
 import pepsi from "./Images/Pepsi.jpg";
 import chicken from "./Images/chicken.jpeg";
 import pulpy from "./Images/pulpy.jpeg";
+import Croka from "./Images/Croka.jpeg";
+import titus from "./Images/titus.jpg";
+import Hake from "./Images/Hake.jpeg";
 
 
 export const products = [
@@ -13,7 +16,8 @@ export const products = [
         search: "Coca Cola",
         category: "SoftDrink",
         price: 500,
-        popular: true
+        popular: true,
+        subCategory :"Discount"
     },
     {
         id:2,
@@ -63,7 +67,8 @@ export const products = [
         search: "Table Water",
         category: "Water",
         price: 200,
-        popular: true
+        popular: true,
+        subCategory :"Discount"
     },
     {
         id:7,
@@ -73,7 +78,8 @@ export const products = [
         search: "Table Water",
         category: "Water",
         price: 200,
-        popular: true
+        popular: true,
+        subCategory :"Bestseller"
     },
     {
         id:8,
@@ -93,7 +99,8 @@ export const products = [
         search: "Table Water",
         category: "Water",
         price: 200,
-        popular: false
+        popular: false,
+        
     },
     {
         id:10,
@@ -103,7 +110,8 @@ export const products = [
         search: "Table Water",
         category: "Water",
         price: 200,
-        popular: false
+        popular: false,
+         subCategory :"Bestseller"
     },
     {
         id:11,
@@ -113,6 +121,31 @@ export const products = [
         search: "Table Water",
         category: "Water",
         price: 200,
-        popular: false
+        popular: false,
+         subCategory :"Discount"
     },
+    {
+        id:12,
+        img:Hake ,
+        name: "Hake Fish",
+        search: "Hake ",
+        category: "FrozenFood",
+        price: 200,
+        quantity:["5KG","10KG","20KG"],
+        description:"Best quality frozen foods you can get with ensured freshness like they were freshly caught",
+         subCategory :"Discount"
+
+    },
+    {
+        id:13,
+        img:Croka ,
+        name: "Croker Fish",
+        search: "Croker ",
+        category: "FrozenFood",
+        price: 200,
+        quantity:["5KG","10KG","20KG"],
+        description:"Best quality frozen foods you can get with ensured freshness like they were freshly caught",
+         subCategory :"Discount"
+
+    }
 ];

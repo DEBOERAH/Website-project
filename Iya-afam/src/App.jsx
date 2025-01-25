@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import Contactus from "./pages/Contactus.jsx";
-import Product from "./pages/productItem.jsx";
+import Product from "./pages/ProductItem.jsx";
 import Cart from "./pages/Cart.jsx";
 
 
