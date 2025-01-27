@@ -1,10 +1,11 @@
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import {IoMdSearch} from "react-icons/io";
 import {RxHamburgerMenu} from "react-icons/rx";
 import {FaCartShopping} from "react-icons/fa6";
 import {MdOutlinePerson} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { ShopContext } from '../../context/ShopContext ';
 
 const MenuLinks = [
     {id: 1, name: "Home", link: "/home"},
@@ -15,6 +16,7 @@ const MenuLinks = [
 
 const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const {getCartCount} = useContext(ShopContext);
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
@@ -69,7 +71,7 @@ const Navbar = () => {
                         <Link to  = "/Cart" className="relative">
                         
                             <FaCartShopping className="text-xl text-gray-600"/>
-                            <p className='absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-[#F4A4AA] text-white aspect-square rounded-full text-[8px]'>10</p>
+                            <p className='absolute right-[-5px] top-[-5px] w-4 text-center leading-4 bg-[#F4A4AA] text-white aspect-square rounded-full text-[8px]'>{getCartCount()}</p>
                             
                         </Link>
                         <div></div>
