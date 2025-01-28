@@ -1,4 +1,4 @@
-import { createContext, useEffect } from "react";
+import { createContext } from "react";
 import { products } from "../assets/data.js";
 import { useState } from "react";
 import { toast } from "react-toastify";
